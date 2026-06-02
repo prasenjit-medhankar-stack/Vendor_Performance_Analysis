@@ -1,224 +1,328 @@
-Vendor Performance Analysis Dashboard
+<h1 align="center">Vendor Performance Analysis</h1>
+
+<p align="center">
 End-to-End Data Analytics Project using Python, SQLite, SQL, Power BI, and Data Visualization
+</p>
 
-A complete analytics solution designed to evaluate vendor performance, inventory efficiency, procurement strategy, and profitability using transactional sales and purchasing data.
+<p align="center">
+This project analyzes vendor performance, purchasing behavior, inventory efficiency, profitability, and procurement trends to generate actionable business insights and support data-driven decision making.
+</p>
 
-Project Overview
 
-This project demonstrates a complete data analytics workflow from raw CSV files to business intelligence dashboards.
+# Project Overview
+
+This project demonstrates a complete data analytics workflow starting from raw data ingestion to interactive business intelligence dashboard development.
 
 The project includes:
 
-Loading multiple datasets into Python
-Data cleaning and preprocessing
-Building a SQLite database
-Performing SQL-based business analysis
-Creating vendor-level KPIs
-Building an interactive Power BI dashboard
-Generating business recommendations
+- Loading multiple CSV datasets into Python
+- Building a SQLite database
+- Data cleaning and preprocessing
+- Performing Exploratory Data Analysis (EDA)
+- Creating business metrics using SQL
+- Building an interactive Power BI dashboard
+- Generating business recommendations and insights
 
-The objective is to transform raw procurement and sales data into actionable insights that help optimize vendor management, inventory control, and profitability.
+The objective of this project is to transform raw sales, purchase, inventory, and vendor data into meaningful business intelligence for procurement optimization and vendor performance evaluation.
 
-Dataset Information
-Datasets Used
-Purchases.csv
-Sales.csv
-Purchase_Prices.csv
-Vendor_Invoice.csv
-Begin_Inventory.csv
-End_Inventory.csv
-Dataset Description
+
+# Dataset Information
+
+### Datasets Used
+
+| Dataset | Description |
+|----------|------------|
+| purchases.csv | Purchase transaction records |
+| sales.csv | Sales transaction records |
+| purchase_prices.csv | Product purchase price details |
+| vendor_invoice.csv | Freight and vendor invoice information |
+| begin_inventory.csv | Beginning inventory records |
+| end_inventory.csv | Ending inventory records |
+
+### Dataset Description
 
 The datasets contain information related to:
 
-Vendor details
-Product information
-Purchase transactions
-Sales transactions
-Freight costs
-Inventory levels
-Product pricing
-Tools & Technologies
-Tool / Technology	Purpose
-Python	Data processing and automation
-Pandas	Data cleaning and transformation
-NumPy	Numerical operations
-SQLite	Database creation and management
-SQL	Data querying and analysis
-Matplotlib	Data visualization
-Seaborn	Statistical visualization
-Power BI	Dashboard development
-Jupyter Notebook	Analysis environment
-Project Workflow
-Data Ingestion
+- Vendor details
+- Product information
+- Purchase transactions
+- Sales transactions
+- Inventory levels
+- Freight costs
+- Product pricing
+- Revenue generation
+- Procurement activities
 
-Raw CSV files were loaded into Python and ingested into SQLite.
 
-Tasks Performed
-Imported datasets
-Validated file structure
-Created database tables
-Loaded data into SQLite
-Exploratory Data Analysis (EDA)
+# Tools & Technologies
 
-Performed EDA to understand vendor behavior and business performance.
+<table align="center">
+<tr>
+<th>Tool / Technology</th>
+<th>Purpose</th>
+</tr>
 
-EDA Activities
-Univariate Analysis
-Bivariate Analysis
-Distribution Analysis
-Outlier Detection
-Correlation Analysis
-Inventory Analysis
-Vendor Performance Analysis
-Visualization Techniques Used
-Histograms
-Boxplots
-Scatter Plots
-Correlation Heatmaps
-Bar Charts
-Distribution Plots
-Data Cleaning & Preprocessing
+<tr>
+<td><b>Python</b></td>
+<td>Data loading, cleaning, and automation</td>
+</tr>
 
-Performed:
+<tr>
+<td><b>Pandas</b></td>
+<td>Data manipulation and preprocessing</td>
+</tr>
 
-Missing value treatment
-Duplicate removal
-Data type conversion
-String standardization
-Data validation
-Feature engineering
-SQL Analysis Using SQLite
+<tr>
+<td><b>NumPy</b></td>
+<td>Numerical computation</td>
+</tr>
 
-The cleaned datasets were merged and analyzed using SQL.
+<tr>
+<td><b>SQLite</b></td>
+<td>Database creation and management</td>
+</tr>
 
-SQL Concepts Used
-SELECT Statements
-WHERE Clauses
-GROUP BY
-ORDER BY
-Aggregate Functions
-Common Table Expressions (CTEs)
-JOIN Operations
-Filtering & Sorting
-Feature Engineering
+<tr>
+<td><b>SQL</b></td>
+<td>Data querying and aggregation</td>
+</tr>
 
-Additional business metrics were created:
+<tr>
+<td><b>Matplotlib</b></td>
+<td>Data visualization</td>
+</tr>
 
-Gross Profit
-Gross Profit = Total Sales Dollars - Total Purchase Dollars
-Profit Margin
-Profit Margin = Gross Profit / Total Sales Dollars
-Stock Turnover
-Stock Turnover = Sales Quantity / Purchase Quantity
-Sales-to-Purchase Ratio
-Sales-to-Purchase Ratio = Sales Dollars / Purchase Dollars
-Power BI Dashboard
+<tr>
+<td><b>Seaborn</b></td>
+<td>Statistical visualization</td>
+</tr>
 
-An executive-level dashboard was developed to monitor vendor and inventory performance.
+<tr>
+<td><b>Power BI</b></td>
+<td>Dashboard development</td>
+</tr>
 
-Dashboard Features
-KPI Cards
-Total Sales
-Total Purchases
-Gross Profit
-Profit Margin
-Unsold Capital
-Vendor Analysis
-Top Vendors by Sales
-Vendor Purchase Contribution
-Low Performing Vendors
-Brand Analysis
-Top Brands by Revenue
-Low Performing Brands
-Inventory Analysis
-Inventory Turnover
-Unsold Capital Tracking
-Profitability Analysis
-Vendor Profitability
-Margin Distribution
-Key Insights
-Vendor Concentration Risk
+<tr>
+<td><b>Jupyter Notebook</b></td>
+<td>Analysis environment</td>
+</tr>
 
-Top vendors contribute the majority of purchase volume, creating supply chain dependency.
+<tr>
+<td><b>GitHub</b></td>
+<td>Project version control and documentation</td>
+</tr>
 
-Bulk Purchasing Benefits
+</table>
 
-Large purchase quantities significantly reduce procurement costs.
 
-Inventory Optimization Opportunity
+# Project Workflow
 
-Unsold inventory capital indicates opportunities for improving turnover and cash flow.
+## Data Ingestion
 
-Profitability Variations
+Raw CSV files were loaded into Python and ingested into a SQLite database.
 
-Significant differences exist between top-performing and low-performing vendors.
+### Tasks Performed
 
-Brand Growth Opportunities
+- Imported raw datasets
+- Validated file structure
+- Created SQLite database tables
+- Automated data ingestion pipeline
+- Logged ingestion activities
 
-Several high-margin brands have low sales volumes and can benefit from targeted promotions.
 
-Business Recommendations
-Vendor Diversification
+## Exploratory Data Analysis (EDA)
 
-Reduce reliance on a small group of vendors.
+Performed detailed exploratory analysis to understand vendor behavior, sales trends, and profitability patterns.
 
-Inventory Optimization
+### EDA Activities
 
-Improve stock turnover through better procurement planning.
+<ul>
+<li>Univariate Analysis</li>
+<li>Bivariate Analysis</li>
+<li>Distribution Analysis</li>
+<li>Outlier Detection</li>
+<li>Correlation Analysis</li>
+<li>Vendor Performance Analysis</li>
+<li>Inventory Analysis</li>
+<li>Profitability Analysis</li>
+</ul>
 
-Pricing Strategy Improvement
+### Visualization Techniques Used
 
-Reassess pricing of underperforming products.
+- Histograms
+- Boxplots
+- Scatter Plots
+- Correlation Heatmaps
+- Bar Charts
+- Distribution Plots
 
-Promotional Campaigns
 
-Increase visibility of profitable low-volume brands.
+## Data Cleaning & Preprocessing
 
-Procurement Optimization
+Performed data preprocessing tasks such as:
 
-Continue leveraging bulk purchasing to maximize margins.
+- Handling missing values
+- Data type conversion
+- Removing inconsistencies
+- Standardizing text columns
+- Data validation
+- Feature engineering
 
-Dashboard Preview
 
-(Insert your Power BI dashboard screenshot here)
+## SQL Analysis using SQLite
 
-How to Run the Project
-Step 1: Data Ingestion
+The cleaned datasets were imported into SQLite and analyzed using SQL queries.
 
-Run:
+### SQL Tasks Performed
 
-python ingestion_db.py
-Step 2: Generate Vendor Summary
+- Created database tables
+- Imported cleaned datasets
+- Performed joins across multiple tables
+- Generated vendor-level summaries
+- Created analytical KPIs
 
-Run:
+### SQL Concepts Used
 
-python get_vendor_summary.py
-Step 3: Exploratory Data Analysis
+<ul>
+<li>SELECT Statements</li>
+<li>WHERE Clauses</li>
+<li>GROUP BY</li>
+<li>ORDER BY</li>
+<li>Aggregate Functions</li>
+<li>JOIN Operations</li>
+<li>Common Table Expressions (CTEs)</li>
+<li>Filtering & Sorting</li>
+</ul>
 
-Open:
 
-Exploratory_Data_Analysis.ipynb
+# Feature Engineering
 
-Run all cells.
+Several business metrics were created for performance evaluation.
 
-Step 4: Power BI Dashboard
+| Metric | Formula |
+|----------|----------|
+| Gross Profit | Total Sales Dollars − Total Purchase Dollars |
+| Profit Margin | Gross Profit ÷ Total Sales Dollars |
+| Stock Turnover | Total Sales Quantity ÷ Total Purchase Quantity |
+| Sales to Purchase Ratio | Total Sales Dollars ÷ Total Purchase Dollars |
 
-Open:
+These metrics help evaluate vendor efficiency, profitability, and inventory movement.
 
-Vendor_Performance_Dashboard.pbix
 
-Refresh the data source if required.
+# Power BI Dashboard
 
-Project Outcome
+An interactive Power BI dashboard was built to monitor vendor performance and business profitability.
 
-This project demonstrates practical experience in:
+## Dashboard Features
 
-Data Cleaning
-Exploratory Data Analysis
-SQL Development
-Database Management
-Business Intelligence
-Power BI Dashboarding
-Data Storytelling
-Business Recommendation Generation
+### Executive KPI Cards
+
+- Total Sales
+- Total Purchases
+- Gross Profit
+- Profit Margin
+- Unsold Capital
+
+### Vendor Analysis
+
+- Top Vendors by Sales
+- Purchase Contribution Analysis
+- Low Performing Vendors
+
+### Brand Analysis
+
+- Top Brands by Sales
+- Low Performing Brands
+
+### Inventory Analysis
+
+- Stock Turnover Tracking
+- Unsold Inventory Monitoring
+
+### Profitability Analysis
+
+- Gross Profit Evaluation
+- Profit Margin Analysis
+- Sales-to-Purchase Performance
+
+### Interactive Features
+
+- Dynamic Filters
+- Vendor Selection
+- Brand Selection
+- Drill-Down Analysis
+- Cross Filtering
+
+
+# Dashboard Preview
+
+<p align="center">
+<img src="Dashboard.png" alt="Vendor Performance Dashboard" width="1000"/>
+</p>
+
+# Key Insights
+
+### Vendor Dependency Risk
+
+The top vendors contribute a significant portion of total purchases, creating supplier concentration risk.
+
+### Bulk Purchasing Benefits
+
+Higher purchase volumes result in lower procurement costs, demonstrating economies of scale.
+
+### Inventory Optimization Opportunity
+
+Unsold inventory represents locked capital that can be optimized through better inventory planning.
+
+### Profitability Variations
+
+Substantial differences exist between top-performing and low-performing vendors.
+
+### Brand Growth Opportunities
+
+Several high-margin brands have relatively low sales volume, creating opportunities for targeted promotions.
+
+
+# Business Recommendations
+
+### Vendor Diversification
+
+Reduce dependence on a limited number of vendors to minimize supply chain risk.
+
+### Inventory Optimization
+
+Improve inventory turnover through better forecasting and procurement planning.
+
+### Pricing Strategy Improvement
+
+Review pricing strategies for underperforming products.
+
+### Procurement Optimization
+
+Continue leveraging bulk purchasing strategies to maximize margins.
+
+### Marketing Enhancement
+
+Increase visibility of profitable but low-volume products through targeted campaigns.
+
+
+# Project Outcome
+
+This project demonstrates practical skills in:
+
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- SQL Querying
+- Database Management
+- Data Visualization
+- Business Intelligence
+- Power BI Dashboard Development
+- Data Storytelling
+- Business Recommendation Generation
+
+
+Data Analyst | SQL | Python | Power BI | Business Intelligence
+
+LinkedIn: Add Your LinkedIn Profile
+
+GitHub: Add Your GitHub Profile
